@@ -7,7 +7,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner3.png);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/bg1.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -21,7 +21,7 @@ nav {
 }
 
 nav img {
-    width: 150px;
+    width: 100px;
 }
 
 .nav-links {
@@ -54,6 +54,37 @@ nav img {
 
 .nav-links ul li:hover::after {
     width: 100%;
+}
+
+.text-box a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.text-box a.red {
+    color: #fff;
+    background: red;
+    transition: 0.3s ease;
+}
+
+.text-box a.red:hover {
+    color: red;
+    background: white;
+}
+
+.text-box a.green {
+    color: #fff;
+    background: green;
+    transition: 0.3s ease;
+}
+
+.text-box a.green:hover {
+    color: green;
+    background: white;
 }
 
 .text-box {
@@ -98,15 +129,19 @@ nav .fa {
     display: none;
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
+
+    /* Reduce font size of h1 for better readability on smaller screens */
     .text-box h1 {
         font-size: 20px;
     }
 
+    /* Change display of nav links to block for vertical navigation */
     .nav-links ul li {
         display: block;
     }
 
+    /* Position the nav links off-screen to the right and make it fixed */
     .nav-links {
         position: fixed;
         background: #f44336;
@@ -119,6 +154,7 @@ nav .fa {
         transition: 1s;
     }
 
+    /* Display the Font Awesome icon for the menu toggle */
     nav .fa {
         display: block;
         color: #fff;
@@ -127,6 +163,7 @@ nav .fa {
         cursor: pointer;
     }
 
+    /* Add padding to the nav links for better readability */
     .nav-links ul {
         padding: 30px;
     }
@@ -219,7 +256,7 @@ h3 {
 }
 
 .layer:hover {
-    background: rgba(226, 0, 0, 0.7);
+    background: rgba(226, 0, 0, 0.3);
 }
 
 .layer h3 {
@@ -250,7 +287,7 @@ h3 {
 .facilities-col {
     flex-basis: 31%;
     border-radius: 10px;
-    margin bottom: 5%;
+    margin-bottom: 5%;
     text-align: left;
 }
 
@@ -416,6 +453,48 @@ h3 {
     color: #fff;
 }
 
+#experts{
+    padding: 8vw 8vw 0 8vw;
+    text-align: center;
+}
+
+#experts .expert-box img{
+    width: 200px;
+    border-radius: 15px;
+}
+
+#experts .expert-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+
+#experts .expert-box .profiles {
+    background: #fafaf1;
+    padding: 30px 10px;
+}
+
+.pro-links{
+    margin-top: 10px;
+}
+.pro-links i{
+    padding: 10px 13px;
+    border: 1px solid #f44336;
+    color: #f44336;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pro-links i:hover {
+    background: #f44336;
+    color: #fff;
+    border: 1px solid #f44336;
+    cursor: pointer;
+}
+
+
+
 /* -- blog ---*/
 
 .blog-content {
@@ -430,6 +509,8 @@ h3 {
 
 .blog-left img {
     width: 100%;
+    display: block;
+
 }
 
 .blog-left h2 {
@@ -451,8 +532,8 @@ h3 {
     background: #f44336;
     color: #fff;
     padding: 7px 0;
-    font size: 16px;
-    margin bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .blog-right div {
